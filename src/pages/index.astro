@@ -1,10 +1,30 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+import Badge from "../components/Badge.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Portfolio">
   <main>
-    <h1 class="text-6xl text-white">Spacex Launch</h1>
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+      <h1
+        class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-10"
+      >
+        Hey, Soy Chistopher
+        <a
+          href="https://www.linkedin.com/in/christopher-jos%C3%A9-ramos-torres-54b879279/"
+          class="flex justify-center items-center"
+          target="_blank"
+          rel="noopener"        
+          >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl opacity-80">
+        Programador Junior con experiencia. Desarrollador web y aplicativo
+        movil. De Lima, Perú 🇵🇪. Me espcialñizo en gestión de bases de datos.
+        Enfoque en estructuras eficientes y seguridad.
+      </h2>
+    </section>
   </main>
 </Layout>
