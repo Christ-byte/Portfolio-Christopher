@@ -2,21 +2,33 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Badge from "../components/Badge.astro";
+import LinkedIcon from "../components/icons/LinkedIn.astro";
+import Githubicon from "../components/icons/Github.astro";
+import SocialP from "../components/SocialP.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import Github from "../components/icons/Github.astro";
 ---
 
 <Layout title="Portfolio">
   <main>
     <section class="w-full lg:w-[740px] mx-auto py-44">
+      <img
+        class="rounded-full w-12 h-12 mb-4"
+        src="https://cdn.dribbble.com/users/2602461/screenshots/17434037/media/3eba488c0b46b44b4c41fc8e087b91bc.png"
+        alt="Foto-Perfil"
+      />
+
       <h1
         class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-10"
       >
         Hey, Soy Chistopher
+
         <a
           href="https://www.linkedin.com/in/christopher-jos%C3%A9-ramos-torres-54b879279/"
           class="flex justify-center items-center"
           target="_blank"
-          rel="noopener"        
-          >
+          rel="noopener"
+        >
           <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
@@ -25,6 +37,16 @@ import Badge from "../components/Badge.astro";
         movil. De Lima, Perú 🇵🇪. Me espcialñizo en gestión de bases de datos.
         Enfoque en estructuras eficientes y seguridad.
       </h2>
+      <nav class=" flex gap-x-2">
+        <SocialP href="https://www.linkedin.com/in/christopher-jos%C3%A9-ramos-torres-54b879279/">
+          <LinkedIn class="w-6 h-6" />
+          LinkedIn
+        </SocialP>
+        <SocialP href="https://github.com/Christ-byte">
+          <Github class="w-6 h-6" />
+          Github
+        </SocialP>
+      </nav>
     </section>
   </main>
 </Layout>
