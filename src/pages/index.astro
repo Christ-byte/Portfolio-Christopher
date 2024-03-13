@@ -1,27 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
 import Badge from "../components/Badge.astro";
 import LinkedIcon from "../components/icons/LinkedIn.astro";
 import Githubicon from "../components/icons/Github.astro";
 import SocialP from "../components/SocialP.astro";
-import LinkedIn from "../components/icons/LinkedIn.astro";
-import Github from "../components/icons/Github.astro";
+import MailIcon from "../components/icons/Mail.astro";
 ---
 
-<Layout title="Portfolio">
+<Layout
+  title="Portfolio de christopher - Desarrollador y progamador web - Especialista en base de datos"
+  
+>
   <main>
     <section class="w-full lg:w-[740px] mx-auto py-44">
       <img
-        class="rounded-full w-12 h-12 mb-4"
+        class="rounded-full size-12 mb-4"
         src="https://cdn.dribbble.com/users/2602461/screenshots/17434037/media/3eba488c0b46b44b4c41fc8e087b91bc.png"
         alt="Foto-Perfil"
       />
 
       <h1
-        class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-10"
+        class="text-white text-5xl font-bold flex justify-start flex-row gap-x-4 pb-10"
       >
-        Hey, Soy Chistopher
+        Hey, Soy chistopher
 
         <a
           href="https://www.linkedin.com/in/christopher-jos%C3%A9-ramos-torres-54b879279/"
@@ -37,14 +38,20 @@ import Github from "../components/icons/Github.astro";
         movil. De Lima, Perú 🇵🇪. Me espcialñizo en gestión de bases de datos.
         Enfoque en estructuras eficientes y seguridad.
       </h2>
-      <nav class=" flex gap-x-2">
-        <SocialP href="https://www.linkedin.com/in/christopher-jos%C3%A9-ramos-torres-54b879279/">
-          <LinkedIn class="w-6 h-6" />
+      <nav class="flex gap-x-2 mt-8">
+        <SocialP
+          href="https://www.linkedin.com/in/christopher-jos%C3%A9-ramos-torres-54b879279/"
+        >
+          <LinkedIcon class="size-6" />
           LinkedIn
         </SocialP>
         <SocialP href="https://github.com/Christ-byte">
-          <Github class="w-6 h-6" />
+          <Githubicon class="size-6" />
           Github
+        </SocialP>
+        <SocialP>
+          <MailIcon class="size-6" />
+          ofchrist2@gmail.com
         </SocialP>
       </nav>
     </section>
