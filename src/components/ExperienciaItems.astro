@@ -13,13 +13,13 @@ const { date, tittle, description, link } = Astro.props;
 >
 </div>
 <time
-  class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+  class="mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
   >{date}</time
 >
 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
   {tittle}
 </h3>
-<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-pretty">
   {description}
 </p>
 {
@@ -33,7 +33,7 @@ const { date, tittle, description, link } = Astro.props;
         class="w-3 h-3 ms-2 rtl:rotate-180"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
-        fill="none"
+        fill="  "
         viewBox="0 0 14 10"
       >
         <path
