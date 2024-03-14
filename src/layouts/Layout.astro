@@ -19,14 +19,16 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <div
-      class="absolute inset-0 bg-fuchsia-400 bg-[size:20px_20px] opacity-20 blur-[100px]"
-    >
-    </div>
-
+  <body >
+   
+     <!-- <div
+    class="absolute inset-0 bg-fuchsia-400 bg-[size:20px_20px] opacity-20 blur-[100px]"
+  >
+</div>  -->
+  
     <Header />
     <slot />
+ 
   </body>
 </html>
 <style is:global>
@@ -40,6 +42,6 @@ const { title } = Astro.props;
     background: #050505;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
   }
 </style>
