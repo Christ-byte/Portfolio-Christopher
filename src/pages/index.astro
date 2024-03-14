@@ -15,7 +15,7 @@ import Footer from "../components/Footer.astro";
   title="Portfolio de christopher - Desarrollador y progamador web - Especialista en base de datos"
   
 >
-  <main>
+  <main class="px-4">
     <Container class="py-44 pb-24">
       <img
         class="rounded-full size-12 mb-4"
@@ -24,7 +24,7 @@ import Footer from "../components/Footer.astro";
       />
 
       <h1
-        class="text-white text-5xl font-bold flex justify-start flex-row gap-x-4 pb-10"
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex justify-start flex-row gap-x-4 pb-6 lg:pb-10"
       >
         Hey, Soy chistopher
 
@@ -37,7 +37,7 @@ import Footer from "../components/Footer.astro";
           <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-xl opacity-80">
+      <h2 class="text-xl lg:text-2xl text-wrap opacity-80 max-w-[700px]:">
         Programador Junior con experiencia. Desarrollador web y aplicativo
         movil. De Lima, Perú 🇵🇪. Me espcialñizo en gestión de bases de datos.
         Enfoque en estructuras eficientes y seguridad.
@@ -46,15 +46,15 @@ import Footer from "../components/Footer.astro";
         <SocialP
           href="https://www.linkedin.com/in/christopher-jos%C3%A9-ramos-torres-54b879279/"
         >
-          <LinkedIcon class="size-6" />
+          <LinkedIcon class=" size-4 md:size-6" />
           LinkedIn
         </SocialP>
         <SocialP href="https://github.com/Christ-byte">
-          <Githubicon class="size-6" />
+          <Githubicon class=" size-4 md:size-6" />
           Github
         </SocialP>
         <SocialP href="mailto:ofchrist2@gmail.com">
-          <MailIcon class="size-6" />
+          <MailIcon class=" size-4 md:size-6" />
           ofchrist2@gmail.com
         </SocialP>
       </nav>
@@ -67,6 +67,6 @@ import Footer from "../components/Footer.astro";
       <Experiencia />
     </Containe>
 
-    <Footer />
+  
   </main>
 </Layout>
