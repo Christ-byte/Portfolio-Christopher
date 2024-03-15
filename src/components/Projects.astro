@@ -1,0 +1,37 @@
+---
+const Porjects = [
+  {
+    tittle: "Application UI code in Tailwind CSS",
+    description:
+      "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+    link: "#",
+    github: "#",
+    image: "https://via.placeholder.com/300x200",
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    tittle: "Application UI code CSS",
+    description:
+      "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+    link: "#",
+    github: "#",
+    image: "https://via.placeholder.com/300x200",
+    tags: ["HTML", "CSS", "JavaScript", "Tailwind"],
+  },
+];
+---
+
+{
+  Porjects.map(({ tittle, description, tags, image }) => (
+    <article>
+      <h3>{tittle}</h3>
+      <p>{description}</p>
+      <ul>
+        {tags.map(tags =>(
+        <li>{tags}</li>
+        ))}
+      </ul>
+      <img src={image} alt={`Previa imagen del proyecto, ${image}`} />
+    </article>
+  ))
+}
