@@ -1,4 +1,15 @@
 ---
+import Java from "../components/icons/Java.astro"
+
+const TAGS ={
+  JAVA :{
+    name:"Java",
+    class:"bg-black text-white",
+    icon: Java,
+
+  }
+}
+
 const Porjects = [
   {
     tittle: "Application UI code in Tailwind CSS",
@@ -7,7 +18,7 @@ const Porjects = [
     link: "#",
     github: "#",
     image: "https://via.placeholder.com/300x200",
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: [TAGS.JAVA],
   },
   {
     tittle: "Application UI code CSS",
@@ -16,7 +27,7 @@ const Porjects = [
     link: "#",
     github: "#",
     image: "https://via.placeholder.com/300x200",
-    tags: ["HTML", "CSS", "JavaScript", "Tailwind"],
+    tags: [TAGS.JAVA],
   },
 ];
 ---
@@ -24,14 +35,21 @@ const Porjects = [
 {
   Porjects.map(({ tittle, description, tags, image }) => (
     <article>
-      <h3>{tittle}</h3>
-      <p>{description}</p>
-      <ul>
-        {tags.map(tags =>(
-        <li>{tags}</li>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2 mt-6">{tittle}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row">
+        {tags.map((tag) =>(
+        <li>
+          <span class={`flex gap-x-2 rounded-full text-xl py-1 px-2 ${tag.class}`}>
+            
+            <tag.icon class="size-6" />
+            {tag.name}
+            </span>
+          
+        </li>
         ))}
       </ul>
-      <img src={image} alt={`Previa imagen del proyecto, ${image}`} />
+      <img class="rounded shadow-2xl shadow-white/20 mt-3" src={image} alt={`Previa imagen del proyecto, ${image}`} />
     </article>
   ))
 }
