@@ -9,7 +9,9 @@ import MailIcon from "../components/icons/Mail.astro";
 import Experiencia from "../components/Experiencia.astro";
 import Container from "../components/Container.astro";
 import CodeIcon from "../components/icons/Code.astro";
+import UserIcon from "../components/icons/User.astro";
 import Projects from "../components/Projects.astro";
+import Aboutme from "../components/Aboutme.astro";
 ---
 
 <Layout
@@ -40,8 +42,8 @@ import Projects from "../components/Projects.astro";
         </a>
       </h1>
       <h2 class="text-xl lg:text-2xl text-wrap opacity-80 max-w-[700px]:">
-        Programador Junior con experiencia. Desarrollador web y aplicativo
-        movil. De Lima, Perú 🇵🇪. Me espcialñizo en gestión de bases de datos.
+        Programador Junior con experiencia. <strong class="text-[#73dfbf] opacity-90">Desarrollador web y aplicativo
+        movil</strong> de Lima, Perú. Además, me espcializo en gestión de bases de datos.
         Enfoque en estructuras eficientes y seguridad.
       </h2>
       <nav class="flex gap-x-2 mt-8">
@@ -78,5 +80,12 @@ import Projects from "../components/Projects.astro";
       <Projects />
     </Container>
 
+    <Container id="proyectos" class="">
+      <h2 class="text-3xl font-semibold  flex gap-x-3 items-center">
+        <UserIcon class="size-6" />
+        Sobre mi
+      </h2>
+      <Aboutme />
+    </Container>
   </main>
 </Layout>
