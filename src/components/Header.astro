@@ -1,13 +1,62 @@
-<header class="
- flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto">
+---
 
 
-  <nav class="relative flex flex-row gap-x-[42px] opacity-90">
-    <a href="#inicio">Inicio</a>
-    <a href="#experiencia">Experiencia</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#sobremi">Sobre mí</a>
-    <a href="#contacto">Conctato</a>
+const navItems = [
+  {
+    title: "Experiencia",
+    label: "experiencia",
+    url: "/#experiencia",
+  },
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#proyectos",
+  },
+  {
+    title: "Sobre mí",
+    label: "sobre-mi",
+    url: "/#sobre-mi",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "#",
+  },
+]
+---
+<header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2
+ ">
+
+
+  <nav class="flex flex-row gap-x-[40px] opacity-90
+  px-5 rounded-full pb-1 backdrop-blur-sm">
+    <!-- <a href="#inicio">Inicio  bg-green-500/30 </a> -->
+    {
+      navItems.map((link) => (
+        <a
+          class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+          aria-label={link.label}
+          href={link.url}
+        >
+          {link.title}
+        </a>
+      ))
+    }
+    
   </nav>
 
 </header>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/50 ring-white/10;
+    }
+  }
+</style>
