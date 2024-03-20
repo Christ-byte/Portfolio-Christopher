@@ -1,24 +1,30 @@
 ---
 import Java from "../components/icons/Java.astro"
+import Android from "../components/icons/AndroidStudio.astro"
 
 const TAGS ={
   JAVA :{
     name:"Java",
-    class:"bg-black text-white",
+    class:"bg-gray-900 text-white",
     icon: Java,
 
+  },
+  ANDROID :{
+    name:"Android",
+    class:"bg-black text-white",
+    icon: Android,
   }
 }
 
 const Porjects = [
   {
-    tittle: "Application UI code in Tailwind CSS",
+    tittle: "Aplicativo Movil de Gestoy de dinero",
     description:
-      "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+      "Un aplicacion de Gestion Financiero personal CoinControls Se trabajo con una base de datos en la nube Firebase, graficos de estadisticas, y un diseño de interfaz de usuario atractivo.",
     link: "#",
-    github: "#",
-    image: "https://via.placeholder.com/300x200",
-    tags: [TAGS.JAVA],
+    github: "https://github.com/Christ-byte/ProyectoGestorTesteo",
+    image: "./public/Proyecto1.webp",
+    tags: [TAGS.JAVA, TAGS.ANDROID],
   },
   {
     tittle: "Application UI code CSS",
