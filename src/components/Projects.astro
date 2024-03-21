@@ -20,7 +20,7 @@ const Porjects = [
   {
     tittle: "Aplicativo Movil de Gestoy de dinero",
     description:
-      "Un aplicacion de Gestion Financiero personal CoinControls Se trabajo con una base de datos en la nube Firebase, graficos de estadisticas, y un diseño de interfaz de usuario atractivo.",
+      "Un aplicacion de Gestion Financiero personal CoinControls. Se trabajo con una base de datos en la nube Firebase, graficos de estadisticas y un diseño de interfaz de usuario atractivo.",
     link: "#",
     github: "https://github.com/Christ-byte/ProyectoGestorTesteo",
     image: "./public/Proyecto1.webp",
@@ -41,7 +41,7 @@ const Porjects = [
 {
   Porjects.map(({ tittle, description, tags, image }) => (
     <article>
-      <h3 class="text-2xl font-semibold text-yellow-200 mb-2 mt-6">{tittle}</h3>
+      <h3 class="text-2xl font-semibold text-green-200 mb-2 mt-6">{tittle}</h3>
       <p class="text-lg mb-4 text-pretty">{description}</p>
       <ul class="flex gap-x-2 flex-row">
         {tags.map((tag) =>(
@@ -55,7 +55,7 @@ const Porjects = [
         </li>
         ))}
       </ul>
-      <img class="rounded shadow-2xl shadow-white/20 mt-3" src={image} alt={`Previa imagen del proyecto, ${image}`} />
+      <img class="rounded shadow-2xl shadow-white/20 mt-4" src={image} alt={`Previa imagen del proyecto, ${image}`} />
     </article>
   ))
 }
