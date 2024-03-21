@@ -1,29 +1,28 @@
 ---
-import Java from "../components/icons/Java.astro"
-import Android from "../components/icons/AndroidStudio.astro"
+import Java from "../components/icons/Java.astro";
+import Android from "../components/icons/AndroidStudio.astro";
 
-const TAGS ={
-  JAVA :{
-    name:"Java",
-    class:"bg-gray-900 text-white",
+const TAGS = {
+  JAVA: {
+    name: "Java",
+    class: "bg-gray-900 text-white",
     icon: Java,
-
   },
-  ANDROID :{
-    name:"Android",
-    class:"bg-black text-white",
+  ANDROID: {
+    name: "Android",
+    class: "bg-black text-white",
     icon: Android,
-  }
-}
+  },
+};
 
 const Porjects = [
   {
-    tittle: "Aplicativo Movil de Gestoy de dinero",
+    tittle: "Aplicativo Movil de Gestor de dinero",
     description:
       "Un aplicacion de Gestion Financiero personal CoinControls. Se trabajo con una base de datos en la nube Firebase, graficos de estadisticas y un diseño de interfaz de usuario atractivo.",
     link: "#",
     github: "https://github.com/Christ-byte/ProyectoGestorTesteo",
-    image: "./public/Proyecto1.webp",
+    image: "./Imagen_Cel1.webp",
     tags: [TAGS.JAVA, TAGS.ANDROID],
   },
   {
@@ -32,7 +31,7 @@ const Porjects = [
       "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
     link: "#",
     github: "#",
-    image: "https://via.placeholder.com/300x200",
+    image: "./Proyecto1.webp",
     tags: [TAGS.JAVA],
   },
 ];
@@ -40,22 +39,50 @@ const Porjects = [
 
 {
   Porjects.map(({ tittle, description, tags, image }) => (
-    <article>
-      <h3 class="text-2xl font-semibold text-green-200 mb-2 mt-6">{tittle}</h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-2 flex-row">
-        {tags.map((tag) =>(
-        <li>
-          <span class={`flex gap-x-2 rounded-full text-xl py-1 px-2 ${tag.class}`}>
-            
-            <tag.icon class="size-6" />
-            {tag.name}
-            </span>
-          
-        </li>
-        ))}
-      </ul>
-      <img class="rounded shadow-2xl shadow-white/20 mt-4" src={image} alt={`Previa imagen del proyecto, ${image}`} />
+    <article class="flex flex-col items-center  backdrop-blur-md   rounded-lg shadow md:flex-row md:max-w-5xl dark:border-gray-700 my-7">
+      <img
+        class="object-cover w-full rounded-t-lg md:h-auto md:w-96 md:rounded-sm md:rounded-s-lg"
+        src={image}
+      />
+      <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-green-200">
+          {tittle}
+        </h5>
+        <p class="mb-3 font-normal text-gray-400 text-pretty">
+          {description}
+        </p>
+        <ul class="flex gap-x-2 flex-row">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xl py-1 px-2 ${tag.class}`}
+              >
+                <tag.icon class="size-6" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </article>
   ))
 }
+<!-- <h3 class="text-2xl font-semibold text-green-200 mb-2 mt-6">{tittle}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xl py-1 px-2 ${tag.class}`}
+            >
+              <tag.icon class="size-6" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/20 mt-4"
+        src={image}
+        alt={`Previa imagen del proyecto, ${image}`}
+      /> -->
