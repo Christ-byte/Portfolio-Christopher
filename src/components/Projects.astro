@@ -3,6 +3,7 @@ import Java from "../components/icons/Java.astro";
 import Android from "../components/icons/AndroidStudio.astro";
 import Firebase from "../components/icons/Firebase.astro";
 import MySql from "../components/icons/Mysql.astro";
+import Css from "../components/icons/Css.astro";
 
 const TAGS = {
   JAVA: {
@@ -25,6 +26,11 @@ const TAGS = {
     class: "bg-gray-900 text-gray-200 ",
     icon: MySql,
   },
+  CSS: {
+    name: "Css",
+    class: "bg-gray-900 text-gray-200 ",
+    icon: Css,
+  },
 };
 
 const Porjects = [
@@ -34,17 +40,17 @@ const Porjects = [
       "Un aplicacion de Gestion Financiero personal CoinControls. Se trabajo con una base de datos en la nube Firebase, graficos de estadisticas y un diseño de interfaz de usuario atractivo.",
     link: "#",
     github: "https://github.com/Christ-byte/ProyectoGestorTesteo",
-    image: "./img/Imagen_Cel1.webp",
+    image: "./img/celularApk.webp",
     tags: [TAGS.JAVA, TAGS.ANDROID, TAGS.FIREBASE, TAGS.MYSQL],
   },
   {
-    tittle: "Application UI code CSS",
+    tittle: "Pagina web de Cifrados",
     description:
-      "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+      "Una pagina web de cifrados y descifrados de mensajes, se utilizo el cifrado de Cesar, Vigenere. Ademas de un diseño de interfaz de usuario atractivo.",
     link: "#",
     github: "#",
-    image: "./img/Proyecto1.webp",
-    tags: [TAGS.JAVA],
+    image: "./img/webCifrado.webp",
+    tags: [TAGS.CSS,],
   },
 ];
 ---
