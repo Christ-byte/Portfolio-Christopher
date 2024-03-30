@@ -4,6 +4,8 @@ import Android from "../components/icons/AndroidStudio.astro";
 import Firebase from "../components/icons/Firebase.astro";
 import MySql from "../components/icons/Mysql.astro";
 import Css from "../components/icons/Css.astro";
+import JavaScript from "../components/icons/Javascript.astro";
+import Html from "../components/icons/Html.astro";
 
 const TAGS = {
   JAVA: {
@@ -31,6 +33,16 @@ const TAGS = {
     class: "bg-gray-900 text-gray-200 ",
     icon: Css,
   },
+  JAVASCRIPT: { 
+    name: "JavaScript",
+    class: "bg-gray-900 text-gray-200 ",
+    icon: JavaScript,
+  },
+  HTML: { 
+    name: "HTML",
+    class: "bg-gray-900 text-gray-200 ",
+    icon: Html,
+  },
 };
 
 const Porjects = [
@@ -50,7 +62,7 @@ const Porjects = [
     link: "#",
     github: "#",
     image: "./img/webCifrado.webp",
-    tags: [TAGS.CSS,],
+    tags: [TAGS.CSS, TAGS.JAVASCRIPT, TAGS.HTML],
   },
 ];
 ---
